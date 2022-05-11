@@ -13,17 +13,10 @@
 // [12, 14, 55, 24]
 // The input will always be a valid list, a and b will always be different integers equal to or greater than zero, but they may be zero or be larger than the length of the list.
 
-let ages = [12, 14, 63, 72, 55, 24];
 
-console.log(ages.splice(3, 1)); // 72
-console.log(ages);  // 12, 14, 63, 55, 24
+function inverseSlice(items, a, b) {
+    items.splice(a, b-a)
+    return items
+  }
 
-
-
-
-
-
-// function inverseSlice(items, a, b) {
-//     items.splice(a, b-a)
-//     return items
-//   }
+  console.log("muaz")
