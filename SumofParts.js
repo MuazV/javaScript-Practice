@@ -24,17 +24,42 @@
 // Take a look at performance: some lists have thousands of elements.
 // Please ask before translating.
 
+
+
+//Solution-1
+// let ls = [1,2,3,4,5];
+// let len = ls.length
+// let arr = [];
+// for (let i = 0; i<= len;i++){
+//     let muaz = ls.reduce(topla,0)
+//     function topla(sum,v) {
+//         return sum+=v
+//     }
+//     arr.push(muaz);
+//     ls.shift();
+// }
+// console.log(arr);
+
 let ls = [1,2,3,4,5];
-let len = ls.length
-let arr = [];
+
+const arrSum = arr => arr.reduce((a,b) => a + b, 0)
+let sum = [arrSum(ls)]
+let total = 0
 
 for (let i = 0; i<= len;i++){
-    let muaz = ls.reduce(topla,0)
-    function topla(sum,v) {
-        return sum+=v
-    }
-    arr.push(muaz);
-    ls.shift();
+    total -= ls[i]
+    sum.push(total)
 }
 
-console.log(arr);
+
+
+
+let len = ls.length
+let arrs = [];
+
+
+// for (let i = 0; i<= len;i++){
+//     arrs.push(arrSum(ls));
+//     ls.shift();
+//     console.log(arrs);
+// }
