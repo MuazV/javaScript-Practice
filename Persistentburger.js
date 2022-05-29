@@ -7,8 +7,6 @@
 // // 4 --> 0 (because 4 is already a one-digit number)
 
 
-let number = 39;
-let hub = number.toString();
 
 function persistence(num) {
     let i = 0;
