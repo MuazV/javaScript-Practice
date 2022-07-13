@@ -8,17 +8,20 @@
 
 
 let parent = "xXfuUuuF";
-let yusuf = parent.toLowerCase().split("").sort().join("")
-let new_list = []
+function findChildren(dancingBrigade){
+    let word = dancingBrigade.toLowerCase().split("").sort().join("")
+    let new_list = []
 
-for(let i = 1; i<yusuf.length; i++){
-    if(yusuf.charCodeAt(i-1) != yusuf.charCodeAt(i)){
-        new_list.push(yusuf[i].toUpperCase())
+    for(let i=1; i<word.length; i++){
+        if(word.charCodeAt(i-1) != word.charCodeAt(i)){
+            new_list.push(word[i].toUpperCase())
+        }
+        else{
+            new_list.push(word[i])
+        }
     }
-    else{
-        new_list.push(yusuf[i])
-    }
+    new_list.unshift(String.fromCharCode((new_list[0].charCodeAt()) - 32))
+    return (new_list.join(""))
 }
-new_list.unshift(String.fromCharCode((new_list[0].charCodeAt()) - 32))
-console.log(new_list.join(""))
 
+console.log(findChildren(parent))
