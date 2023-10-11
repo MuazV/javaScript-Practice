@@ -14,13 +14,13 @@
 // // console.log(length)
 
 // for(let i = 0; i<length; length--){
-//    reversedSentence+= (sentence.split(" ")[length-1])
+//    reversedSentence = (sentence.split(" ")[length-1]) + " " + reversedSentence
 // }
-// console.log(reversedSentence.split(/(?=[A-Z])/).join(" "));
+// // console.log(reversedSentence.split(/(?=[A-Z])/).join(" "));
+// console.log(reversedSentence);
 
 // 2.Yöntem
 
 let sentence = "Hello Js World 2023"
 let reverseWord = (sentence.split(" ").reverse().join().replaceAll(",", " "))
 console.log(reverseWord);
-
